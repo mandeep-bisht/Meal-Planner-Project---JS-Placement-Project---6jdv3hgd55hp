@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav-bar" id="nav-bar">
+        <div class="navbar-brand">
+            <span class="material-symbols-outlined">
+                emoji_food_beverage
+            </span>
+            <a id="heading" href="#">Meal Planner</a>
+        </div>
+    </nav>
+    <form action="">
+        <div id="form-part1">
+            <input type="number" min="1" id="user-height" class="flex-items" placeholder="Enter Height" required>
+            <input type="number" min="1" id="user-weight" class="flex-items" placeholder="Enter Weight" required>
+            <input type="number" min="1" id="user-age" class="flex-items" placeholder="Enter Age" required>
+        </div>
+        <div id="form-part2">
+            <select name="gender" id="user-gender" class="flex-items" required>
+                <option value="" hidden selected id="gender-option">Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <select name="activity-level" id="user-activity-level" class="flex-items" required>
+                <option value="" hidden selected>Activity Level</option>
+                <option value="1.375">Low</option>
+                <option value="1.55">Moderate</option>
+                <option value="1.725">High</option>
+            </select>
+        </div>
+        <button id="btn" class="btn">Generate Meals</button>
+    
+        <div id="cards">
+            <div class="card-heading">BREAKFAST
+                <div id="card-1" class="card">
+                    <img src="" alt="img" id="image1" class="card-img">
+                    <h5 id="breakfast-heading">Meal 1</h5>
+                    <p>Calories - </p>
+                    <button id="card-btn1" class="card-btn">GET RECIPIE</button>
+                </div>
+            </div>
+            <div class="card-heading">LUNCH
+                <div id="card-2" class="card">
+                    <img src="" alt="img" id="image2" class="card-img">
+                    <h5 id="lunch-heading">Meal 2</h5>
+                    <p>Calories - </p>
+                    <button id="card-btn2" class="card-btn">GET RECIPIE</button>
+                </div>
+            </div>
+            <div class="card-heading">DINNER
+                <div id="card-3" class="card">
+                    <img src="" alt="img" id="image3" class="card-img">
+                    <h5 id="dinner-heading">Meal 3</h5>
+                    <p>Calories - </p>
+                    <button id="card-btn3" class="card-btn">GET RECIPIE</button>
+                </div>
+            </div>
+        </div>
 
+        <div id="recipe-card">
+            <div id="ingredients" class="recipe-content">
+                <h3>INGREDENTS</h3>
+            </div>
+            <div id="steps" class="recipe-content">
+                <h3>STEPS</h3>
+            </div>
+            <div id="equipment" class="recipe-content">
+                <h3>EQUIPMENT</h3>
+            </div>
+        </div>
+</form>
+</body>
+<script src="App.js"></script>
+</html>
