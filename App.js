@@ -112,6 +112,9 @@ const showCard = (data) => {
 }
 
 const showIngredients = (data) => {
+    ingredients.innerHTML = "<h3>INGREDENTS</h3>"
+    steps.innerHTML="<h3>STEPS</h3>"
+    equipment.innerHTML = "<h3>EQUIPMENT</h3>"
     for(let i = 0; i<data.extendedIngredients.length; i++){
         let ingre = document.createElement("p")
         ingre.innerHTML = data.extendedIngredients[i].aisle;
