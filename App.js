@@ -20,6 +20,8 @@ const breakfastHeading = document.querySelector("#breakfast-heading");
 const lunchHeading = document.querySelector("#lunch-heading");
 const dinnerHeading = document.querySelector("#dinner-heading");
 
+const card = document.querySelector("#cards");
+const recipeCard = document.querySelector("#recipe-card");
 
 const btn = document.querySelector("#btn");
 
@@ -42,6 +44,7 @@ btn.addEventListener("click", (event) => {
 
         showImg(id1, id2 , id3);
         
+        card.style.display = 'flex';
     });
     
 })
@@ -80,6 +83,7 @@ const showCard = (data) => {
             console.log(data);
             showIngredients(data);
         });
+        recipeCard.style.display = 'flex';
     })
 
     cardBtn2.addEventListener("click", (event) =>{
@@ -91,6 +95,7 @@ const showCard = (data) => {
             console.log(data);
             showIngredients(data);
         });
+        recipeCard.style.display = 'flex';
     })
     
     cardBtn3.addEventListener("click", (event) =>{
@@ -102,6 +107,7 @@ const showCard = (data) => {
             console.log(data);
             showIngredients(data);
         });
+        recipeCard.style.display = 'flex';
     })
 }
 

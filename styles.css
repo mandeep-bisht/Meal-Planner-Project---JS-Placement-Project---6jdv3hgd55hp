@@ -72,15 +72,12 @@ select:invalid {
 }
 
 #cards{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
     text-align: center;
-}
-
-#cards{
     margin: 20px;
 }
 
@@ -111,10 +108,11 @@ select:invalid {
     border: 1px solid white;
     border-radius: 5px;
     padding: 4px 7px;
+    margin-bottom: 7px;
 }
 
 #recipe-card{
-    display: flex;    
+    display: none;    
     justify-content: center;
     /* align-items: center; */
     justify-content: space-around;
