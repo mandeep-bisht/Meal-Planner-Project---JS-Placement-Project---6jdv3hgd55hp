@@ -20,8 +20,18 @@ const breakfastHeading = document.querySelector("#breakfast-heading");
 const lunchHeading = document.querySelector("#lunch-heading");
 const dinnerHeading = document.querySelector("#dinner-heading");
 
+const tooltip1 = document.querySelector("#tooltip1");
+const tooltip2 = document.querySelector("#tooltip2");
+const tooltip3 = document.querySelector("#tooltip3");
+
 const card = document.querySelector("#cards");
 const recipeCard = document.querySelector("#recipe-card");
+
+const calorieMeter1 = document.querySelector("#calorie-meter1");
+const calorieMeter2 = document.querySelector("#calorie-meter2");
+const calorieMeter3 = document.querySelector("#calorie-meter3");
+
+const showCalorie = [calorieMeter1, calorieMeter2, calorieMeter3];
 
 const btn = document.querySelector("#btn");
 
@@ -45,6 +55,16 @@ btn.addEventListener("click", (event) => {
         showImg(id1, id2 , id3);
         
         card.style.display = 'flex';
+        var idarr = [id1, id2, id3];
+
+        for(let i = 0; i<3; i++){
+            fetch(`https://api.spoonacular.com/recipes/${idarr[i]}/nutritionWidget.json?apiKey=f8f4bf6c77eb43a5a58f7f0e353c060b`)
+            .then(res => {
+                return res.json();
+            }).then(data => {
+                insertCalorie(data, i);
+            });
+        }
     });
     
 })
@@ -73,6 +93,21 @@ const showCard = (data) => {
     breakfastHeading.innerHTML = data.meals[0].title;
     lunchHeading.innerHTML = data.meals[1].title;
     dinnerHeading.innerHTML = data.meals[2].title;
+
+    breakfastHeading.addEventListener("mouseover", () => {
+        tooltip1.innerHTML = data.meals[0].title;
+        tooltip1.style.visibility = "visible";
+    })
+
+    lunchHeading.addEventListener("mouseover", () => {
+        tooltip2.innerHTML = data.meals[1].title;
+        tooltip2.style.visibility = "visible";
+    })
+
+    dinnerHeading.addEventListener("mouseover", () => {
+        tooltip3.innerHTML = data.meals[2].title;
+        tooltip3.style.visibility = "visible";
+    })
 
     cardBtn1.addEventListener("click", (event) =>{
         event.preventDefault();
@@ -155,4 +190,10 @@ const showImg = (id1, id2, id3) =>{
     }).then(data => {
         image3.setAttribute("src", data.image)
     });
+}
+
+const insertCalorie = (data, i) => {
+    console.log(data)
+    showCalorie[i].innerHTML = `<p>Calorie - ${data.bad[0].amount}</p>`;
+    console.log(data.bad[0].amount)
 }

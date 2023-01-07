@@ -81,6 +81,12 @@ select:invalid {
     margin: 20px;
 }
 
+.meal{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 .card-heading{
     color: rgb(237, 88, 71);
     font-size: 20px;
@@ -108,19 +114,19 @@ select:invalid {
     border: 1px solid white;
     border-radius: 5px;
     padding: 4px 7px;
+    margin-top: 9px;
     margin-bottom: 7px;
 }
 
 #recipe-card{
     display: none;    
     justify-content: center;
-    /* align-items: center; */
     justify-content: space-around;
-    /* height: 80vh; */
     width: 80vw;
     background-color: rgb(225, 225, 225);
     border-radius: 20px;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 h3{
@@ -135,6 +141,20 @@ h3{
 }
 
 #recipe-card .recipe-content p{
-    font-size: larger;
+    font-size: 20px;
     margin-bottom: 20px;
+}
+
+.tooltip{
+    visibility: hidden;
+    width: auto;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
 }
