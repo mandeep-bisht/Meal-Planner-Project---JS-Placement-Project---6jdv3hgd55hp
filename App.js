@@ -99,14 +99,26 @@ const showCard = (data) => {
         tooltip1.style.visibility = "visible";
     })
 
+    breakfastHeading.addEventListener("mouseleave", () => {
+        tooltip1.style.visibility = "hidden";
+    })
+
     lunchHeading.addEventListener("mouseover", () => {
         tooltip2.innerHTML = data.meals[1].title;
         tooltip2.style.visibility = "visible";
     })
 
+    lunchHeading.addEventListener("mouseleave", () => {
+        tooltip2.style.visibility = "hidden";
+    })
+
     dinnerHeading.addEventListener("mouseover", () => {
         tooltip3.innerHTML = data.meals[2].title;
         tooltip3.style.visibility = "visible";
+    })
+
+    dinnerHeading.addEventListener("mouseleave", () => {
+        tooltip3.style.visibility = "hidden";
     })
 
     cardBtn1.addEventListener("click", (event) =>{
