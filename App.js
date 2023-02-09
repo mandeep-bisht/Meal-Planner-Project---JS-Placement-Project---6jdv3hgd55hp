@@ -7,6 +7,8 @@ const cardBtn1 = document.querySelector("#card-btn1");
 const cardBtn2 = document.querySelector("#card-btn2");
 const cardBtn3 = document.querySelector("#card-btn3");
 
+const showReqCalorie = document.querySelector("showReqCalorie");
+
 const image1 = document.querySelector("#image1");
 const image2 = document.querySelector("#image2");
 const image3 = document.querySelector("#image3");
@@ -40,6 +42,8 @@ btn.addEventListener("click", (event) => {
 
     let targetCalorie = calculateBMR();
     console.log(targetCalorie);
+
+    showCalorie.innerHTML = targetCalorie;
 
     fetch(`https://api.spoonacular.com/mealplanner/generate?apiKey=f8f4bf6c77eb43a5a58f7f0e353c060b&timeFrame=day&targetCalories=${targetCalorie}`)
     .then(res => {

@@ -14,13 +14,13 @@
             <span class="material-symbols-outlined">
                 emoji_food_beverage
             </span>
-            <a id="heading" href="#">Meal Planner</a>
+            <span id="heading">Meal Planner</span>
         </div>
     </nav>
     <form action="">
         <div id="form-part1">
-            <input type="number" min="1" id="user-height" class="flex-items" placeholder="Enter Height" required>
-            <input type="number" min="1" id="user-weight" class="flex-items" placeholder="Enter Weight" required>
+            <input type="number" min="1" id="user-height" class="flex-items" placeholder="Enter Height (cm)" required>
+            <input type="number" min="1" id="user-weight" class="flex-items" placeholder="Enter Weight (kg)" required>
             <input type="number" min="1" id="user-age" class="flex-items" placeholder="Enter Age" required>
         </div>
         <div id="form-part2">
@@ -37,6 +37,8 @@
             </select>
         </div>
         <button id="btn" class="btn">Generate Meals</button>
+
+        <div class="showReqCalorie"></div>
 
         <div id="cards" class="hidden-card">
             <div class="card-heading">BREAKFAST

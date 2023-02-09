@@ -8,6 +8,7 @@
 nav{
     background-color: rgb(237, 88, 71);
     font-family: 'Great Vibes', cursive;
+    width: 100vw;
 }
 .navbar-brand{
     color: white;
@@ -76,7 +77,7 @@ select:invalid {
     justify-content: center;
     align-items: center;
     justify-content: space-evenly;
-    width: 100%;
+    width: 100vw;
     text-align: center;
     margin: 20px;
 }
@@ -160,3 +161,43 @@ h3{
     padding: 3px 10px;
     opacity: 85%;
 }
+
+@media only screen 
+    and (device-width: 390px) 
+    and (device-height: 844px) 
+    and (-webkit-device-pixel-ratio: 3) { 
+        #form-part1{
+            flex-direction: column;
+        }
+        #form-part2{
+            display: flex;
+            flex-direction: column;
+        }
+        #cards{
+            flex-direction: column;
+        }
+
+        .card-heading{
+            margin-bottom: 3rem;
+        }
+
+        #steps{
+            visibility: hidden;
+        }
+        
+        #equipment{
+            visibility: hidden;
+        }
+
+        #recipe-card{
+            display: hidden;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .flex-items{
+            width: 70vw;
+        }
+     }
