@@ -163,9 +163,8 @@ h3{
 }
 
 @media only screen 
-    and (device-width: 390px) 
-    and (device-height: 844px) 
-    and (-webkit-device-pixel-ratio: 3) { 
+    and (min-width: 320px)
+    and (max-width: 480px) { 
         #form-part1{
             flex-direction: column;
         }
